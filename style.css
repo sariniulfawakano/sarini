@@ -1,0 +1,163 @@
+/* Navigasi */
+a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    padding: 14px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+li a {
+    background: #333;
+    color: #d4d4d4;
+    border-radius: 5px;
+}
+
+li a:hover {
+    background: #4da4ff;
+    color: #fff;
+}
+
+/* Navigasi Bar */
+.navi {
+    background: #222;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Home Section Background */
+#home {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url('background.jpg'); /* Pastikan mengganti dengan path gambar yang sesuai */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Kartu Buku */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  /* Pastikan gambar tidak keluar dari batas kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Menambahkan jarak bawah */
+}
+
+.card img {
+    width: 100%; /* Gambar menyesuaikan lebar kartu */
+    height: 250px; /* Sesuaikan tinggi gambar agar lebih menonjol */
+    object-fit: cover; /* Menyesuaikan gambar agar tetap proporsional */
+    transition: transform 0.3s ease;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem; /* Sedikit lebih kecil agar tidak terlalu menonjol dibandingkan gambar */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Efek pembesaran gambar saat hover */
+}
+
+/* Cart Table */
+#cart-table {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table .btn-danger {
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Navbar Link Active */
+.navbar .nav-link.active {
+    color: white;
+    background-color: #0d6efd;
+    border-radius: 5px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .card img {
+        height: 200px; /* Mengurangi ukuran gambar pada layar kecil */
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .total {
+        font-size: 1rem;
+    }
+
+    /* Mengatur agar gambar buku lebih kecil pada perangkat mobile */
+    .card img {
+        height: 200px;
+    }
+}
